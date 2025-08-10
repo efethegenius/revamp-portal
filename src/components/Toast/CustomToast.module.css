@@ -1,0 +1,147 @@
+@import url("../../constants/colors.css");
+@import url("../../constants/fonts.css");
+
+.toast {
+  display: flex;
+  align-items: center;
+  max-width: 400px;
+  min-height: 60px;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 8px;
+  position: relative;
+  box-shadow: 0 4px 12px var(--grey-light-shadow);
+  border-left: 4px solid;
+}
+.custom-toast-wrapper {
+  background: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+.custom-toast-body {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.Toastify__toast {
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.Toastify__toast-body {
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+}
+.success {
+  background-color: var(--success-50);
+  border-left-color: var(--success-300);
+  color: var(--success-400);
+}
+
+.warning {
+  background-color: var(--orange-50);
+  border-left-color: var(--orange-300);
+  color: var(--orange-400);
+}
+
+.error {
+  background-color: var(--error-100);
+  border-left-color: var(--error-600);
+  color: var(--error-700);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+}
+
+.iconContainer {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success .icon {
+  color: var(--success-400);
+}
+
+.warning .icon {
+  color: var(--orange-300);
+}
+
+.error .icon {
+  color: var(--error-700);
+}
+
+.textContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.title {
+  font-family: var(--regular-font-family);
+  font-size: var(--regular-font-size);
+  font-weight: var(--regular-font-weight);
+  margin: 0;
+}
+
+.actionButton {
+  background: none;
+  border: none;
+  color: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+  font-family: var(--regular-font-family);
+  font-size: var(--regular-font-size);
+  padding: 0;
+  margin: 0;
+}
+
+.actionButton:hover {
+  opacity: 0.8;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
+.closeButton:hover {
+  opacity: 1;
+  background-color: var(--grey-light-shadow);
+}
+
+:global(.dark) .success {
+  background-color: var(--success-50);
+  color: var(--success-300);
+}
+
+:global(.dark) .warning {
+  background-color: var(--orange-50);
+  color: var(--orange-300);
+}
+
+:global(.dark) .error {
+  background-color: var(--error-100);
+  color: var(--error-700);
+}

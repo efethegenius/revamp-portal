@@ -1,0 +1,187 @@
+@import url("../../constants/fonts.css");
+@import url("../../constants/colors.css");
+
+.commonAttribute {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100%;
+  max-width: 350px !important;
+  /* min-height: 44px !important; */
+  font-family: var(--bold-font-family);
+  font-size: var(--bold-font-size);
+  font-weight: var(--bold-font-weight);
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.primarybutton {
+  background-color: var(--primary) !important;
+  color: var(--white);
+  border: none !important;
+  transition: background-color 0.3s ease;
+  padding: 10px !important;
+  font-size: var(--thin-font-size);
+
+  &:hover {
+    background-color: var(--purple-700) !important ;
+  }
+
+  &:disabled {
+    background-color: var(--purple-disabled) !important;
+    color: var(--grey-25) !important;
+    cursor: not-allowed;
+  }
+}
+
+.primarybuttonLoading {
+  color: var(--white) !important;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.icon {
+  width: var(--button-icon-size);
+  height: var(--button-icon-size);
+  margin-right: 14px;
+  margin-top: -4px;
+  animation: spin 1s linear infinite;
+}
+.destructiveButton {
+  background-color: transparent !important;
+  color: var(--error-500) !important;
+  border: 2px solid var(--error-500) !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 10px !important;
+}
+
+.destructiveButton:hover:not(:disabled) {
+  background-color: var(--error-600) !important;
+  color: var(--error-disabled) !important;
+}
+
+.destructiveIcon {
+  color: var(--black);
+  width: var(--button-icon-size);
+  height: var(--button-icon-size);
+  margin-right: 14px;
+  margin-top: -4px;
+}
+
+.destructiveLoading {
+  color: var(--error-500) !important;
+}
+
+.destructiveButton:disabled {
+  background-color: transparent !important;
+  border-color: var(--error-disabled) !important;
+  color: var(--error-disabled) !important;
+  cursor: not-allowed !important;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  font-size: var(--regular-font-size);
+}
+
+.secondaryButton {
+  background-color: transparent !important;
+  color: var(--grey-color) !important;
+  border: 2px solid var(--grey-300) !important;
+  transition: all 0.3s ease;
+  padding: 10px !important;
+  font-size: var(--thin-font-size);
+}
+
+.secondaryButton:hover:not(:disabled) {
+  background-color: var(--grey-300) !important;
+  color: var(--black) !important;
+}
+
+.secondaryButton:disabled {
+  background-color: transparent !important;
+  border-color: var(--grey-300) !important;
+  color: var(--grey-300) !important;
+  cursor: not-allowed !important;
+}
+
+.secondaryButtonLoading {
+  color: var(--grey-color);
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  font-size: var(--regular-font-size);
+}
+
+.destructiveLoadingDark {
+  color: var(
+    --error-500
+  ) !important; /* or use --grey-600 if more appropriate */
+}
+
+.destructiveButtonDark {
+  background-color: transparent !important;
+  color: var(--error-800) !important;
+  border: 2px solid var(--error-800) !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: var(--thin-font-size);
+}
+
+.destructiveBorderFixDark {
+  border-color: var(--error-800) !important;
+}
+
+.secondaryButtonDark {
+  background-color: transparent !important;
+  border: 2px solid var(--grey-500) !important;
+  color: var(--grey-500) !important;
+}
+
+/* Optional: dark loading text color */
+.secondaryButtonLoadingDark {
+  color: var(--white) !important;
+}
+
+.iconDark {
+  color: var(--white) !important; /* or any grey/light shade for dark mode */
+  filter: brightness(1000%) invert(00%);
+}
+
+.secondaryButtonTextDark {
+  color: var(--white) !important;
+}
+
+.secondaryButtonTextDark:hover:not(:disabled) {
+  color: var(--white) !important;
+  border: 1px solid var(--white) !important;
+}
+
+.primaryButtonDark {
+  background-color: var(
+    --purple-800
+  ) !important; /* or keep it transparent if needed */
+  color: var(--grey-300) !important;
+  border: 2px solid transparent !important;
+  transition: all 0.3s ease;
+}
+
+.primaryButtonLoadingDark {
+  color: var(--white) !important;
+}
+
+.iconDark {
+  filter: brightness(0) invert(1) contrast(1000%) !important;
+}

@@ -1,0 +1,706 @@
+.textBase {
+  font-family: var(--regular-font-family) !important;
+  font-size: var(--regular-font-size) !important;
+  font-weight: var(--regular-font-weight) !important;
+}
+
+.defaultBox {
+  width: 100%;
+  max-width: 350px;
+  height: 50px;
+  border: 1px solid var(--grey-300);
+  border-radius: 12px;
+  transition: border-color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.withLabelBox {
+  padding: 0;
+  margin: 0 !important;
+  width: 100%;
+  max-width: 350px;
+  height: 60px;
+  border: 1px solid var(--grey-300);
+  border-radius: 12px;
+  transition: border-color 0.3s ease;
+  display: flex;
+  overflow: hidden;
+
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* label STYLES */
+.insideLabel {
+  color: var(--primary);
+  margin-left: 1rem;
+  margin-bottom: 2px;
+  margin-top: 6px;
+  display: block;
+  text-align: left;
+  transition: var(--primary);
+}
+
+.labelError {
+  color: var(--error-500);
+}
+
+.labelNormal {
+  color: var(--grey-500);
+}
+
+/* INPUT FIELD STYLES */
+.inputField {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--grey-color);
+  margin-left: 1rem;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.inputField::placeholder {
+  color: var(--grey-color);
+}
+
+.withLabelBox .inputField {
+  height: auto;
+  margin-left: 1rem;
+  overflow: hidden;
+}
+
+/* STATE MODIFIERS */
+.focused,
+.inputFocused {
+  border-color: var(--primary) !important;
+}
+
+.inputBoxError {
+  border-color: var(--error-500) !important;
+}
+
+.inputBoxDisabled {
+  color: var(--grey-25);
+  border-color: var(--grey-300) !important;
+}
+.inputBoxDisabled .inputField::placeholder,
+.inputBoxDisabled .inputField,
+.inputBoxDisabled .insideLabel,
+.inputBoxDisabled .inputField:disabled {
+  color: var(--grey-300);
+}
+.disabled {
+  color: var(--grey-25);
+  cursor: not-allowed;
+}
+
+.feedback {
+  color: var(--error-500);
+  margin-top: 4px;
+  text-align: right !important;
+  font-size: var(--thin-font-size) !important;
+}
+
+/* HIGHLIGHTED VARIANTS */
+.highlightedBox {
+  border: 1px solid var(--grey-300);
+  color: var(--grey-500);
+}
+
+.highlightedBox .inputField::placeholder {
+  color: var(--grey-300);
+}
+
+.highlightedTelephoneBox,
+.highlightedPasswordInput,
+.highlightedTextInput {
+  border: 1px solid var(--grey-25);
+}
+
+.highlightedTelephoneBox .countryCode,
+.highlightedTelephoneBox .telephoneInput::placeholder,
+.highlightedTelephoneBox .dropdownIcon,
+.highlightedPasswordInput .inputField::placeholder,
+.highlightedPasswordInput .eyeToggleBtn,
+.highlightedTextInput .inputField::placeholder,
+.highlightedTextInput .inputField,
+.highlightedPasswordInput .inputField,
+.highlightedTelephoneBox .telephoneInput {
+  color: var(--grey-25);
+}
+
+/* .highlightedBackgroundChange {
+  background-color: var(--white);
+} */
+
+.highlightedIcon {
+  color: var(--grey-300) !important;
+}
+
+/* PASSWORD TOGGLE */
+.withToggleIcon {
+  position: relative;
+}
+
+.eyeToggleBtn {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--grey-500);
+}
+
+.inputWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.withLabelAndToggle .eyeToggleBtn {
+  bottom: 10px;
+  transform: none;
+}
+
+/* TELEPHONE INPUT */
+.telephoneInputContainer {
+  position: relative;
+}
+
+.telephoneInputWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.countryCode {
+  margin-left: 16px;
+  color: var(--grey-500);
+  white-space: nowrap;
+}
+
+.telephoneInput {
+  flex-grow: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding-left: 8px;
+  color: var(--grey-500);
+}
+
+.withLabelBox .telephoneInputWrapper {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 16px;
+  overflow: hidden;
+}
+
+.withLabelBox .countryCode {
+  margin-left: 0;
+  padding-right: 0;
+  overflow: hidden;
+}
+
+.telephoneInput::placeholder {
+  color: var(--grey-300);
+}
+
+.dropdownIcon {
+  color: var(--grey-300);
+  margin-left: 4px;
+  z-index: 10;
+}
+
+/* DROPDOWN COMPONENTS */
+.dropdownWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  margin-bottom: 0px;
+}
+
+.dropdownInput {
+  height: 20px;
+  border: 1px solid var(--grey-300);
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--grey-500);
+
+  cursor: pointer;
+}
+
+.chevron {
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--grey-500);
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.dropdownContent {
+  position: absolute;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 2px 6px var(--grey-dark-300);
+  z-index: 10;
+  padding: 0;
+  color: var(--grey-500);
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+/* SEARCH COMPONENTS  */
+.searchBoxWrapper {
+  width: 100%;
+  max-width: 375px;
+  height: 50px;
+  border: 1px solid var(--grey-300);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  gap: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.searchBoxWrapper:focus-within {
+  border-color: var(--primary);
+}
+
+.searchIcon {
+  color: var(--grey-500);
+  flex-shrink: 0;
+  margin-left: 13px;
+}
+
+.searchInput {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: var(--regular-font-size);
+  font-family: var(--regular-font-family);
+  color: var(--grey-500);
+  background-color: transparent;
+}
+
+.searchInput::placeholder {
+  color: var(--grey-color);
+}
+
+/* VALUE STATES */
+.hasValue .inputField {
+  color: var(--grey-800);
+}
+
+.hasValue.highlightedTextInput {
+  border-color: var(--primary);
+}
+
+/* NEUTRAL VARIANT */
+.neutralBox {
+  border: 1px solid var(--grey-25);
+
+  border-radius: 12px;
+  height: 62px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: var(--grey-25);
+  transition: border-color 0.3s ease;
+}
+
+.neutralFocused {
+  border-color: var(--grey-400);
+}
+
+.neutralInput {
+  color: var(--grey-300);
+}
+
+.neutralInput,
+.neutralInput::placeholder,
+.labelGreyFocused,
+.labelGrey {
+  color: var(--grey-300) !important;
+}
+
+/* DROPDOWN STYLES */
+.dropdownWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  margin-bottom: 13px;
+}
+
+input[type="date"] {
+  appearance: auto;
+  -webkit-appearance: date-picker;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.inputWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.dateIcon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* allows click-through to input */
+  color: var(--black);
+}
+
+:global(.dark) .dateIcon {
+  color: var(--white);
+}
+
+.dropdownInput {
+  height: 53px;
+  border: 1px solid var(--grey-100);
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.chevron {
+  font-size: var(--regular-font-size);
+  color: var(--grey-50);
+}
+
+.dropdownContainer {
+  position: relative;
+}
+
+.dropdownContent {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background: var(--white);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px var(--grey-light-shadow);
+}
+
+.searchBox {
+  width: calc(100% - 32px);
+  margin: 8px 16px;
+  padding: 8px 12px;
+  border: 1px solid var(--grey-25);
+  border-radius: 8px;
+  outline: none;
+}
+
+.optionList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.optionItem {
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
+.optionItem:hover {
+  background-color: var(--grey-25);
+}
+
+/* SEARCH COMPONENTS */
+.searchBoxWrapper {
+  width: 100%;
+  max-width: 360px;
+  height: 50px;
+  border: 1px solid var(--grey-300);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  gap: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.searchBoxWrapper:focus-within {
+  border-color: var(--grey-500);
+}
+
+.searchIcon {
+  color: var(--grey-500);
+  flex-shrink: 0;
+  margin-left: 13px;
+}
+
+.searchInput {
+  border: none;
+  outline: none;
+  flex: 1;
+  color: var(--grey-500);
+  background-color: transparent;
+}
+
+.searchInput::placeholder {
+  color: var(--grey-color);
+}
+
+.dropdownWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  z-index: 10;
+}
+
+.dropdownInput {
+  position: relative;
+  padding: 22px 48px 8px 16px;
+  border: 1.5px solid var(--grey-300);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: border-color 0.2s ease;
+  background-color: var(--white);
+}
+
+.dropdownInputActive {
+  border-color: var(--purple-500);
+}
+
+.dropdownRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 16px;
+}
+
+.selectedText {
+  color: var(--grey-800);
+  margin-top: 4px;
+}
+
+.placeholderText {
+  color: var(--grey-400);
+}
+
+.checkbox input[type="checkbox"] {
+  /* width: 18px;
+  height: 18px; */
+  background-color: var(--white);
+  border-radius: 4px;
+  border: 2px solid #ccc;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox label {
+  color: var(--grey-500);
+}
+:global(.dark) .checkbox label {
+  color: var(--white);
+}
+
+:global(.dark) .checkbox input[type="checkbox"] {
+  background-color: var(--grey-1100);
+}
+
+.checkbox input[type="checkbox"]:checked {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.checkbox input[type="checkbox"]:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.checkbox input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  width: 4px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  display: none;
+}
+
+.label {
+  position: absolute;
+  top: 18px;
+  left: 16px;
+  font-size: var(--regular-font-size);
+  color: var(--grey-400);
+  pointer-events: none;
+  transition: all 0.2s ease;
+  z-index: 2;
+}
+
+.labelFloat {
+  top: 6px;
+  font-size: var(--thin-font-size);
+  padding-bottom: 4px;
+}
+
+.labelActive {
+  color: var(--purple-500);
+}
+
+.chevron {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.2s ease;
+  z-index: 2;
+}
+
+.rotate {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.dropdownContent {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px var(--grey-dark-300);
+  z-index: 9999;
+}
+
+.optionList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.optionItem {
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
+.optionItem:hover {
+  background-color: var(--grey-25);
+}
+
+.noLabel {
+  padding: 12px 16px;
+  height: 50px !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row !important;
+}
+
+/* DARK */
+
+.dropdownInputDark {
+  background-color: var(--grey-800);
+  border: 1.5px solid var(--grey-600);
+  color: var(--white-100);
+}
+
+.labelDark {
+  color: var(--purple-200);
+}
+
+.selectedTextDark {
+  color: var(--white-100);
+}
+
+.chevronDark {
+  color: var(--white-100);
+}
+.dropdownContentDark {
+  background-color: var(--grey-700);
+  box-shadow: 0 4px 10px var(--grey-dark-100);
+  border: 1px solid var(--grey-600);
+}
+
+.optionItemDark {
+  color: var(--white-100);
+  background-color: var(--grey-700);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.optionItemDark:hover {
+  background-color: var(--grey-500);
+  color: var(--white-100);
+}
+
+.labelDark {
+  color: var(--grey-300);
+}
+
+.labelDark.labelActive {
+  color: var(--purple-200);
+}
+
+/* Light Mode Autofill */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px var(--white-100) inset !important;
+  box-shadow: 0 0 0 1000px var(--white-100) inset !important;
+  -webkit-text-fill-color: black !important;
+  font-size: inherit;
+  font-family: inherit;
+  transition: background-color 9999s ease-out 0s;
+}
+
+/* Dark Mode Autofill */
+:global(.dark) input:-webkit-autofill,
+:global(.dark) input:-webkit-autofill:hover,
+:global(.dark) input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px var(--grey-900) inset !important;
+  box-shadow: 0 0 0 1000px var(--grey-900) inset !important;
+  -webkit-text-fill-color: white !important;
+  font-size: inherit;
+  font-family: inherit;
+  transition: background-color 9999s ease-out 0s;
+}
+
+:global(.dark) .inputField,
+:global(.dark) .inputField::placeholder,
+:global(.dark) .dropdownInput {
+  color: var(--white) !important;
+}
+:global(.dark) .defaultBox,
+:global(.dark) .dropdownInput {
+  background-color: var(--grey-700) !important;
+  border: none;
+}

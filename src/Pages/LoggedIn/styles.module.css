@@ -1,0 +1,3 @@
+:global(.dark) .title {
+  color: var(--white);
+}

@@ -1,0 +1,53 @@
+/* .container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.line {
+  flex: 1;
+  height: 4.5px;
+  background-color: var(--grey-grey);
+  margin: 0 4px;
+  border-radius: 2px;
+}
+
+.line:first-child {
+  margin-left: 0;
+}
+
+.line:last-child {
+  margin-right: 0;
+}
+
+.active {
+  background-color: var(--tertiary);
+} */
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.line {
+  flex: 1;
+  height: 4.5px;
+  background-color: var(--grey-grey); /* Inactive color (grayish) */
+  margin: 0 4px;
+  border-radius: 2px;
+}
+
+.line:first-child {
+  margin-left: 0;
+}
+
+.line:last-child {
+  margin-right: 0;
+}
+
+.completed {
+  background-color: var(--tertiary); /* Lemon green for completed steps */
+}

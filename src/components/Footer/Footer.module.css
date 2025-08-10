@@ -1,0 +1,11 @@
+.patternDivider {
+  width: 100vw;
+  height: 70px;
+  background-image: url("../../assets/logos/Frame.png");
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+}
+
+:global(.dark) .patternDivider {
+  background-image: url("../../assets/logos/FrameBlack.png");
+}
