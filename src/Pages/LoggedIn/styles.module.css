@@ -1,3 +1,19 @@
 :global(.dark) .title {
   color: var(--white);
 }
+
+.dashboard {
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .dashboard {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .dashboard {
+    padding: 2rem 3rem;
+  }
+}

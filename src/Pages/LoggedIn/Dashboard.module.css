@@ -1,0 +1,379 @@
+.dashboard {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboardLight {
+  background-color: var(--white);
+  color: var(--grey-800);
+}
+
+.dashboardDark {
+  background-color: var(--grey-1100);
+  color: var(--white);
+}
+
+/* Mobile Greeting */
+.mobileGreeting {
+  margin-bottom: 2rem;
+}
+
+.greeting {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: inherit;
+}
+
+.subtitle {
+  font-size: var(--regular-font-size);
+  color: var(--grey-500);
+  margin: 0;
+}
+
+/* Overview Cards */
+.overviewCards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.overviewCard {
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid var(--grey-300);
+}
+
+.overviewCardLight {
+  background-color: var(--white);
+  border-color: var(--grey-300);
+}
+
+.overviewCardDark {
+  background-color: var(--grey-800);
+  border-color: var(--grey-600);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cardIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--grey-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--grey-600);
+}
+
+.overviewCardDark .cardIcon {
+  background-color: var(--grey-700);
+  color: var(--grey-300);
+}
+
+.cardInfo {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardTitle {
+  font-size: var(--regular-font-size);
+  font-weight: 500;
+  margin: 0;
+  color: inherit;
+}
+
+.cardCount {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: inherit;
+}
+
+.cardActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.seeAllBtn {
+  background: none;
+  border: none;
+  color: var(--secondary);
+  font-size: var(--regular-font-size);
+  cursor: pointer;
+  padding: 0;
+}
+
+.buyNowBtn {
+  background: none;
+  border: none;
+  color: var(--tertiary);
+  font-size: var(--regular-font-size);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0;
+}
+
+/* Transactions Section */
+.transactionsSection {
+  margin-bottom: 2rem;
+}
+
+.transactionsSectionLight {
+  color: var(--grey-800);
+}
+
+.transactionsSectionDark {
+  color: var(--white);
+}
+
+.sectionHeader {
+  margin-bottom: 1rem;
+}
+
+.sectionTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+  color: inherit;
+}
+
+/* Desktop Table */
+.desktopTable {
+  display: none;
+  overflow-x: auto;
+}
+
+.transactionsTable {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: transparent;
+}
+
+.transactionsTable th,
+.transactionsTable td {
+  text-align: left;
+  padding: 1rem;
+  border-bottom: 1px solid var(--grey-300);
+}
+
+.dashboardDark .transactionsTable th,
+.dashboardDark .transactionsTable td {
+  border-bottom-color: var(--grey-600);
+}
+
+.transactionsTable th {
+  font-weight: 500;
+  color: var(--grey-500);
+  font-size: var(--regular-font-size);
+}
+
+.transactionsTable td {
+  color: inherit;
+  font-size: var(--regular-font-size);
+}
+
+/* Mobile List */
+.mobileList {
+  display: block;
+}
+
+.transactionItem {
+  padding: 1rem;
+  border-bottom: 1px solid var(--grey-300);
+}
+
+.transactionItemLight {
+  border-bottom-color: var(--grey-300);
+}
+
+.transactionItemDark {
+  border-bottom-color: var(--grey-600);
+}
+
+.transactionHeader {
+  margin-bottom: 0.5rem;
+}
+
+.policyNumber {
+  font-weight: 500;
+  color: inherit;
+  font-size: var(--regular-font-size);
+}
+
+.transactionDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productName {
+  color: var(--grey-500);
+  font-size: var(--regular-font-size);
+}
+
+.seeMoreContainer {
+  text-align: right;
+  margin-top: 1rem;
+}
+
+.seeMoreBtn {
+  background: none;
+  border: none;
+  color: var(--secondary);
+  font-size: var(--regular-font-size);
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Promotional Card */
+.promoCard {
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+}
+
+.promoCardLight {
+  background-color: var(--grey-800);
+  color: var(--white);
+}
+
+.promoCardDark {
+  background-color: var(--grey-700);
+  color: var(--white);
+}
+
+.promoContent {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.promoTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+.promoDescription {
+  font-size: var(--regular-font-size);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  color: var(--grey-300);
+}
+
+.promoAction {
+  margin-bottom: 1rem;
+}
+
+.getProductBtn {
+  background: none;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: var(--regular-font-size);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.getProductBtn:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.promoImage {
+  height: 150px;
+  overflow: hidden;
+}
+
+.promoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+  .dashboard {
+    padding: 2rem;
+  }
+
+  .mobileGreeting {
+    display: none;
+  }
+
+  .overviewCards {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .desktopTable {
+    display: block;
+  }
+
+  .mobileList {
+    display: none;
+  }
+
+  .promoCard {
+    flex-direction: row;
+    min-height: 250px;
+  }
+
+  .promoContent {
+    flex: 1;
+    padding: 2rem;
+  }
+
+  .promoImage {
+    width: 40%;
+    height: auto;
+  }
+
+  .promoTitle {
+    font-size: 1.25rem;
+  }
+
+  .transactionsSection {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .dashboard {
+    padding: 2rem 3rem;
+  }
+
+  .overviewCards {
+    gap: 3rem;
+  }
+
+  .promoContent {
+    padding: 2.5rem;
+  }
+}
+
+/* Dark mode specific adjustments */
+:global(.dark) .greeting {
+  color: var(--white);
+}
+
+:global(.dark) .subtitle {
+  color: var(--grey-300);
+}
